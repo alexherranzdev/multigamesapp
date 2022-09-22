@@ -1,5 +1,5 @@
 export const uploadPhoto = async ({ id, image }) => {
-  return fetch('/api/social', {
+  return fetch('https://somosexperiences.dev/wkapp/social.php', {
     method: 'POST',
     body: JSON.stringify({
       id,

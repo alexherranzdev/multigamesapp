@@ -52,11 +52,7 @@ export default function Quiz() {
       image
     }).then((data) => {
       if (data.success) {
-        const url = new URL(document.URL)
-        setUserImage(
-          `${url.protocol}//${url.host}/images/social/${data.fileName}`
-        )
-
+        setUserImage(data.image)
         setTimeout(() => setShowQR(true), 1000)
       }
     })
