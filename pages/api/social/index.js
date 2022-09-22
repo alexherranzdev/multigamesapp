@@ -14,10 +14,10 @@ export default function handler(req, res) {
   const fileName = `${id}.${ext}`
 
   if (!existsSync('public/images/social')) {
-    mkdir('public/images/social', { recursive: true })
+    mkdir('./public/images/social', { recursive: true })
   }
 
-  writeFileSync(`public/images/social/${fileName}`, buf)
+  writeFileSync(`./public/images/social/${fileName}`, buf)
 
   res.statusCode = 200
   res.json({ success: true, fileName })
