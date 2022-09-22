@@ -19,9 +19,8 @@ const podiums = [
 export default function Podium() {
   const [status, setStatus] = useState(0)
   const [showResults, setShowResults] = useState(false)
-  const [dragItem, setDragItem] = useState(0)
   const [selecteds, setSelecteds] = useState({})
-  const [items, setItems] = useState(cards)
+  const [items, setItems] = useState([...cards])
 
   const handleChangeStatus = () => {
     setStatus(1)
@@ -36,9 +35,21 @@ export default function Podium() {
     timeout: IDLE_TIMEOUT
   })
 
+  const handleShowResults = () => {
+    fetch('/api/podium', {
+      method: 'POST',
+      body: JSON.stringify(selecteds)
+    }).then(() => {
+      setStatus(0)
+      setShowResults(true)
+    })
+  }
+
   const resetStep = () => {
     setStatus(0)
     setShowResults(false)
+    setItems(cards)
+    setSelecteds({})
   }
 
   const onDragEnd = (result) => {
@@ -68,7 +79,7 @@ export default function Podium() {
         hide={status}
         step={step}
       ></BGObject>
-      {status === 0 && (
+      {status === 0 && !showResults && (
         <Landing
           step={step}
           title='Nos importa tu opinión'
@@ -91,6 +102,17 @@ export default function Podium() {
                       Arrastra las todas las tarjetas de necesidades según tu
                       prioridad
                     </p>
+                    {!items.length && (
+                      <>
+                        <p className='mt-10 text-2xl'>¡Finalizado!</p>
+                        <button
+                          className='px-10 py-4 mt-4 text-3xl text-white rounded-3xl bg-sky-700'
+                          onClick={handleShowResults}
+                        >
+                          Siguiente
+                        </button>
+                      </>
+                    )}
                   </header>
                   <div className='grid grid-cols-3 gap-6 mt-20'>
                     {items.map(({ id, text }, index) => {
