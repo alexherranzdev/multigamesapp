@@ -1,1 +1,49 @@
-[]
+[
+    {
+        "1": [
+            {
+                "id": 5,
+                "text": "Cambios legales"
+            },
+            {
+                "id": 6,
+                "text": "Transformación del negocio"
+            },
+            {
+                "id": 3,
+                "text": "Digitalización de mi negocio"
+            },
+            {
+                "id": 1,
+                "text": "Integración con otras soluciones del mercado"
+            },
+            {
+                "id": 2,
+                "text": "Modelo de colaboración con mis clientes"
+            },
+            {
+                "id": 1,
+                "text": "Integración con otras soluciones del mercado"
+            }
+        ],
+        "2": [
+            {
+                "id": 1,
+                "text": "Integración con otras soluciones del mercado"
+            }
+        ],
+        "3": [
+            {
+                "id": 5,
+                "text": "Cambios legales"
+            },
+            {
+                "id": 6,
+                "text": "Transformación del negocio"
+            }
+        ],
+        "id": 1,
+        "dateCreated": "2022-09-22T13:21:50.893Z",
+        "dateUpdated": "2022-09-22T13:21:50.893Z"
+    }
+]

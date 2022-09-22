@@ -1,4 +1,4 @@
-const { writeFileSync } = require('fs')
+const { mkdir, writeFileSync, existsSync } = require('fs')
 
 export default function handler(req, res) {
   if (req.method !== 'POST') {
@@ -12,6 +12,11 @@ export default function handler(req, res) {
   const matches = image.match(/^data:image\/(.*);base64/)
   const ext = matches[1] || 'jpg'
   const fileName = `${id}.${ext}`
+
+  if (!existsSync('public/images/social')) {
+    mkdir('public/images/social', { recursive: true })
+  }
+
   writeFileSync(`public/images/social/${fileName}`, buf)
 
   res.statusCode = 200

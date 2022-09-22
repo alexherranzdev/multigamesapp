@@ -76,5 +76,53 @@
         "id": 10,
         "dateCreated": "2022-09-16T07:32:03.177Z",
         "dateUpdated": "2022-09-16T07:32:03.177Z"
+    },
+    {
+        "question_id": 1,
+        "question": "¿Qué te preocupa respecto a tu negocio? ",
+        "value": "La competencia",
+        "id": 11,
+        "dateCreated": "2022-09-22T13:18:49.255Z",
+        "dateUpdated": "2022-09-22T13:18:49.255Z"
+    },
+    {
+        "question_id": 2,
+        "question": "¿Qué herramientas crees que van a ser claves para tu negocio en los próximos meses?",
+        "value": "Herramientas de márketing y comunicación",
+        "id": 12,
+        "dateCreated": "2022-09-22T13:18:52.563Z",
+        "dateUpdated": "2022-09-22T13:18:52.563Z"
+    },
+    {
+        "question_id": 3,
+        "question": "¿En qué podemos apoyar más a tu negocio?",
+        "value": "Análisis y toma de decisiones para el crecimiento de negocio",
+        "id": 13,
+        "dateCreated": "2022-09-22T13:18:54.087Z",
+        "dateUpdated": "2022-09-22T13:18:54.087Z"
+    },
+    {
+        "question_id": 1,
+        "question": "¿Qué te preocupa respecto a tu negocio? ",
+        "value": "h",
+        "id": 14,
+        "dateCreated": "2022-09-22T13:19:52.061Z",
+        "dateUpdated": "2022-09-22T13:19:52.061Z"
+    },
+    {
+        "question_id": 2,
+        "question": "¿Qué herramientas crees que van a ser claves para tu negocio en los próximos meses?",
+        "value": "Análisis de dato (BI)",
+        "id": 15,
+        "dateCreated": "2022-09-22T13:19:53.082Z",
+        "dateUpdated": "2022-09-22T13:19:53.082Z"
+    },
+    {
+        "question_id": 3,
+        "question": "¿En qué podemos apoyar más a tu negocio?",
+        "value": "En la captación, crecimiento y desarrollo del talento",
+        "id": 16,
+        "dateCreated": "2022-09-22T13:19:54.442Z",
+        "dateUpdated": "2022-09-22T13:19:54.442Z"
     }
 ]

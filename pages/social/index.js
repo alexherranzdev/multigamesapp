@@ -86,6 +86,7 @@ export default function Quiz() {
               <figure className='transition-all duration-1000'>
                 <QRCode value={userImage} size={420} />
                 <figcaption className='relative'>
+                  <p>¡Descarga tu foto!</p>
                   <button
                     className='absolute flex items-center justify-center -translate-x-1/2 rounded-full top-3 left-1/2'
                     onClick={handleShowResults}
