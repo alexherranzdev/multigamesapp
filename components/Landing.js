@@ -44,6 +44,7 @@ export default function Landing({
           left: 0;
           width: 100%;
           height: 100%;
+          color: ${colors.white};
         }
 
         .landing__content {
