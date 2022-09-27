@@ -33,8 +33,9 @@ export default function Quiz() {
   })
 
   const resetStep = () => {
-    setStatus(0)
-    setShowResults(false)
+    location.reload()
+    // setStatus(0)
+    // setShowResults(false)
   }
 
   const handleShowResults = () => {

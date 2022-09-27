@@ -24,9 +24,8 @@ export default function Result({ step, title, ...props }) {
               height={597}
               circle={true}
             />
-            <p className='text-5xl mt-36'>¡Muchas gracias!</p>
-            <p className='font-bold leading-tight text-center mt-14 text-7xl'>
-              Consigue puntos escaneando tu código QR
+            <p className='font-bold leading-tight text-center mt-36 text-7xl'>
+              ¡Muchas gracias por tu participación!
             </p>
           </div>
         </div>

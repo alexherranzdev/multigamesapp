@@ -54,8 +54,14 @@ export default function SocialFilter({
       .createCanvas(p5.windowWidth, p5.windowHeight)
       .parent(canvasParentRef)
 
-    video = p5.createCapture(p5.VIDEO)
-    video.hide()
+    if (
+      status === STATUSES.NOT_START ||
+      status === STATUSES.PLAYING ||
+      status === STATUSES.SAVING
+    ) {
+      video = p5.createCapture(p5.VIDEO)
+      video.hide()
+    }
 
     if (ml5) {
       poseNet = ml5.poseNet(video)
@@ -77,15 +83,25 @@ export default function SocialFilter({
         (p5.windowHeight - marco.height) / 2
       )
     }
+    setImage(p5)
+  }
 
-    if (status < STATUSES.SAVING && isSomeone && seq) {
-      p5.push()
+  const setImage = (p5) => {
+    if (isSomeone && seq) {
+      // p5.push()
       p5.translate(
         p5.map(n.x, 0, 640, 0, p5.width) - 320,
         p5.map(n.y, 0, 480, 0, p5.height) - 600
       )
 
       p5.rotate(angle * 1)
+    }
+
+    if (status === STATUSES.STOPPED) {
+      seq.pause()
+    }
+
+    if (status !== STATUSES.SAVING) {
       p5.image(seq, 0, 0)
     }
   }
@@ -138,17 +154,16 @@ export default function SocialFilter({
     setStatus(STATUSES.PLAYING)
     seq.play()
     seq.reset()
+
     setTimeout(pauseVideo, rand)
   }
 
   return (
     <>
       <section className='flex w-full h-full'>
-        {typeof window !== 'undefined' && (
-          <>
-            <Sketch preload={preload} setup={setup} draw={draw} />
-          </>
-        )}
+        <>
+          <Sketch preload={preload} setup={setup} draw={draw} />
+        </>
         {status === STATUSES.NOT_START && (
           <button className='absolute flex items-center justify-center rounded-full bottom-64 left-1/2'>
             <Play fill='#fff' onClick={stopSequence} />
