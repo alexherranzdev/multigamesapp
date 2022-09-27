@@ -88,21 +88,21 @@ export default function SocialFilter({
 
   const setImage = (p5) => {
     if (isSomeone && seq) {
-      // p5.push()
+      p5.push()
       p5.translate(
         p5.map(n.x, 0, 640, 0, p5.width) - 320,
         p5.map(n.y, 0, 480, 0, p5.height) - 600
       )
 
       p5.rotate(angle * 1)
-    }
 
-    if (status === STATUSES.STOPPED) {
-      seq.pause()
-    }
+      if (status === STATUSES.STOPPED) {
+        seq.pause()
+      }
 
-    if (status !== STATUSES.SAVING) {
-      p5.image(seq, 0, 0)
+      if (status !== STATUSES.SAVING) {
+        p5.image(seq, 0, 0)
+      }
     }
   }
 
