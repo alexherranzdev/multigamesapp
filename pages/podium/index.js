@@ -62,9 +62,9 @@ export default function Podium() {
 
     const newSelecteds = { ...selecteds }
     if (newSelecteds[podiumNumber]) {
-      newSelecteds[podiumNumber].push(cards[source.index])
+      newSelecteds[podiumNumber].push(items[source.index])
     } else {
-      newSelecteds[podiumNumber] = [cards[source.index]]
+      newSelecteds[podiumNumber] = [items[source.index]]
     }
 
     setSelecteds(newSelecteds)

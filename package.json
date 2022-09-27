@@ -10,7 +10,8 @@
     "postbuild": "next-export-api",
     "start": "next start",
     "lint": "next lint",
-    "electron-next": "concurrently \"BROWSER=none yarn start\" \"wait-on http://localhost:3000/ && electron .\""
+    "electron-next": "concurrently \"BROWSER=none yarn start\" \"wait-on http://localhost:3000/ && electron .\"",
+    "clear-repos": "node scripts/clear-repos.js"
   },
   "dependencies": {
     "electron-is-dev": "^2.0.0",

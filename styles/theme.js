@@ -28,5 +28,11 @@ export const colors = {
     secondary: '#FFF',
     active: '#0079C2',
     text: '#FFF'
+  },
+  cjourney: {
+    primary: '#85BC20',
+    secondary: '#DCEBD7',
+    active: '#85BC20',
+    text: '#85BC20'
   }
 }

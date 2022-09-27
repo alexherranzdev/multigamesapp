@@ -43,12 +43,17 @@ export default function PodiumCard({
   ...props
 }) {
   const styleCard = {
-    ...styles[index],
+    ...styles[id],
     ...{ backgroundImage: `url(images/podium/icons${id}.png)` }
   }
   return (
     <>
-      <Draggable key={id} draggableId={'' + id} index={index}>
+      <Draggable
+        key={id}
+        draggableId={'' + id}
+        index={index}
+        isDragDisabled={!isDraggable}
+      >
         {(provided) => (
           <div
             ref={provided.innerRef}
