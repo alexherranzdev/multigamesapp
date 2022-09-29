@@ -8,19 +8,23 @@ function createWindow() {
     height: 1920,
     titleBarStyle: 'hidden',
     resizable: false,
-    maximizable: false,
-    fullscreenable: false,
+    fullscreenable: true,
+    maximizable: true,
+    fullscreen: true,
     frame: false,
+    show: false,
     webPreferences: {
       nodeIntegration: true
     }
   })
 
-  const step = process.env.STEP || 'quiz'
+  const step = process.env.STEP || 'podium'
 
   mainWindow.loadURL('http://localhost:3000/' + step)
 
   // mainWindow.webContents.openDevTools({ mode: 'detach' })
+  mainWindow.maximize()
+  mainWindow.show()
 
   mainWindow.on('closed', () => (mainWindow = null))
 }

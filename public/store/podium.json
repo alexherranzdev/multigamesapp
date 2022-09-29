@@ -1,1 +1,49 @@
-[]
+[
+    {
+        "1": [
+            {
+                "id": 2,
+                "text": "Modelo de colaboración con mis clientes"
+            },
+            {
+                "id": 5,
+                "text": "Cambios legales"
+            },
+            {
+                "id": 6,
+                "text": "Transformación del negocio"
+            },
+            {
+                "id": 3,
+                "text": "Digitalización de mi negocio"
+            },
+            {
+                "id": 1,
+                "text": "Integración con otras soluciones del mercado"
+            }
+        ],
+        "2": [
+            {
+                "id": 9,
+                "text": "Ampliación de cartera de clientes"
+            },
+            {
+                "id": 7,
+                "text": "Ampliación de servicios"
+            }
+        ],
+        "3": [
+            {
+                "id": 8,
+                "text": "Cambio al cloud"
+            },
+            {
+                "id": 4,
+                "text": "Nuevas tecnologías"
+            }
+        ],
+        "id": 1,
+        "dateCreated": "2022-09-29T12:17:21.726Z",
+        "dateUpdated": "2022-09-29T12:17:21.726Z"
+    }
+]

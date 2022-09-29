@@ -1,7 +1,19 @@
-import { questionsRepo } from 'helpers/questions-repo'
+export const addApiAnswer = async ({ id, question, value }) => {
+  const url = `${process.env.NEXT_PUBLIC_API_URL}/quiz`
 
-export const addAnswerA = async (question) => {
-  questionsRepo.create(question)
+  const formData = new FormData()
+  formData.append('question_id', id)
+  formData.append('question', question)
+  formData.append('value', value)
+
+  return fetch(url, {
+    method: 'POST',
+    body: formData
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      return data
+    })
 }
 
 export const addAnswer = async ({ id, question, value }) => {

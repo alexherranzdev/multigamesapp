@@ -5,7 +5,7 @@ import questions from 'data/questions'
 import { Question } from 'components/Question'
 import BGObject from 'components/BGObject'
 import { useIdleTimer } from 'react-idle-timer'
-import { addAnswer } from 'services/QuizService'
+import { addApiAnswer } from 'services/QuizService'
 
 const step = process.env.STEP || 'quiz'
 
@@ -46,7 +46,7 @@ export default function Quiz() {
       setStatus(0)
     }
 
-    addAnswer({
+    addApiAnswer({
       ...{ id: questionActive },
       ...questionAnswers[questionActive - 1]
     })

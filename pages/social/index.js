@@ -34,8 +34,6 @@ export default function Quiz() {
 
   const resetStep = () => {
     location.reload()
-    // setStatus(0)
-    // setShowResults(false)
   }
 
   const handleShowResults = () => {
@@ -65,7 +63,7 @@ export default function Quiz() {
       {status === 0 && (
         <Landing
           step={step}
-          title='¿Que tipo de asesor eres?'
+          title='¿Qué tipo de asesor eres?'
           subtitle='Descúbrelo.'
           status={status}
           onClick={handleChangeStatus}
@@ -75,6 +73,7 @@ export default function Quiz() {
         <>
           <SocialFilter
             onCapture={onCapture}
+            onReload={resetStep}
             filterImage={filterImage}
             marcoImage={marcoImage}
           />

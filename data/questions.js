@@ -5,7 +5,7 @@ const questions = [
     icon: 'bag',
     options: [
       { label: 'La competencia', type: 'option' },
-      { label: 'Crisis (inflación, consumo, energia...)', type: 'option' },
+      { label: 'Crisis (inflación, consumo, energía...)', type: 'option' },
       { label: 'Digitalización', type: 'option' },
       { label: 'Otros', type: 'text' }
     ]
@@ -17,7 +17,7 @@ const questions = [
     icon: 'engine',
     options: [
       { label: 'Análisis de dato (BI)', type: 'option' },
-      { label: 'Herramientas de márketing y comunicación', type: 'option' },
+      { label: 'Herramientas de marketing y comunicación', type: 'option' },
       { label: 'Auto Formación para mi equipo y mis clientes', type: 'option' },
       { label: 'Otros', type: 'text' }
     ]

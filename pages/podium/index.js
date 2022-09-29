@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Landing from 'components/Landing'
 import BGObject from 'components/BGObject'
 import { useIdleTimer } from 'react-idle-timer'
@@ -21,6 +21,21 @@ export default function Podium() {
   const [showResults, setShowResults] = useState(false)
   const [selecteds, setSelecteds] = useState({})
   const [items, setItems] = useState([...cards])
+  const [heightPodium, setHeightPodium] = useState(900)
+
+  useEffect(() => {
+    const heights = [700, 950, 1150, 1400]
+
+    if (items.length / 3 > 2) {
+      setHeightPodium(heights[0])
+    } else if (items.length / 3 > 1) {
+      setHeightPodium(heights[1])
+    } else if (items.length / 3 > 0) {
+      setHeightPodium(heights[2])
+    } else {
+      setHeightPodium(heights[3])
+    }
+  }, [selecteds])
 
   const handleChangeStatus = () => {
     setStatus(1)
@@ -146,11 +161,7 @@ export default function Podium() {
                       pref={provided.innerRef}
                       {...provided.draggableProps}
                       {...provided.dragHandleProps}
-                      height={
-                        selecteds[position]
-                          ? 400 + selecteds[position].length * 120
-                          : 400
-                      }
+                      height={heightPodium - position * 1 * 100}
                     >
                       {selecteds[position] && (
                         <div className='grid grid-cols-3 gap-6 mt-20'>

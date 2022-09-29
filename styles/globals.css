@@ -6,6 +6,7 @@ html,
 body {
   padding: 0;
   margin: 0;
+  color: white;
 }
 
 a {
@@ -15,6 +16,8 @@ a {
 
 * {
   box-sizing: border-box;
+  user-select: none;
+  /* cursor: none; */
 }
 
 @media (prefers-color-scheme: dark) {

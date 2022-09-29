@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic'
 import { useState } from 'react'
+import { Camera } from './icons/Camera'
 import Download from './icons/Download'
-import Play from './icons/Play'
 import Reload from './icons/Reload'
 
 let video,
@@ -19,7 +19,8 @@ let video,
 export default function SocialFilter({
   filterImage = null,
   marcoImage = null,
-  onCapture
+  onCapture,
+  onReload
 }) {
   const STATUSES = {
     NOT_START: null,
@@ -166,7 +167,7 @@ export default function SocialFilter({
         </>
         {status === STATUSES.NOT_START && (
           <button className='absolute flex items-center justify-center rounded-full bottom-64 left-1/2'>
-            <Play fill='#fff' onClick={stopSequence} />
+            <Camera fill='#fff' onClick={stopSequence} />
           </button>
         )}
         {(status === STATUSES.STOPPED || status === STATUSES.SAVING) && (
@@ -174,6 +175,7 @@ export default function SocialFilter({
             <button
               className='absolute flex items-center justify-center rounded-full bottom-64 disabled:opacity-20 disabled:pointer-events-none'
               style={{ left: '35%' }}
+              onClick={onReload}
               disabled={status === STATUSES.SAVING}
             >
               <Reload fill='#fff' />
