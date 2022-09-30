@@ -17,6 +17,7 @@ import { eyes, carts, handshakes } from 'constants/icons'
 import { Eye } from 'components/icons/Eye'
 import { Cart } from 'components/icons/Cart'
 import { Handshake } from 'components/icons/Handshake'
+import { addApiCustomerJourney } from 'services/CustomerJourneyService'
 
 const step = 'cjourney'
 
@@ -81,10 +82,7 @@ export default function Podium() {
   }
 
   const handleShowResults = () => {
-    fetch('/api/cjourney', {
-      method: 'POST',
-      body: JSON.stringify(selecteds)
-    }).then(() => {
+    addApiCustomerJourney(selecteds).then(() => {
       setStatus(0)
       setShowResults(true)
     })
