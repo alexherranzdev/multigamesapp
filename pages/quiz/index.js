@@ -7,7 +7,7 @@ import BGObject from 'components/BGObject'
 import { useIdleTimer } from 'react-idle-timer'
 import { addApiAnswer } from 'services/QuizService'
 
-const step = process.env.STEP || 'quiz'
+const step = 'quiz'
 
 export default function Quiz() {
   const [status, setStatus] = useState(0)

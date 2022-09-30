@@ -52,11 +52,11 @@ export function Question({
         }`}
         {...props}
       >
-        <p className='text-2xl text-center -mt-60'>{description}</p>
-        <h1>{title}</h1>
         <span className='mt-5 text-2xl text-center'>{`${
           index + ''
         } / ${totalQuestions}`}</span>
+        <p className='text-2xl text-center -mt-60'>{description}</p>
+        <h1>{title}</h1>
         <div className='flex flex-col justify-center w-3/4 mx-auto mt-56'>
           {options.map((option, index) => {
             return (
