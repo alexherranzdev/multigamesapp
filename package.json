@@ -10,7 +10,10 @@
     "postbuild": "next-export-api",
     "start": "next start",
     "lint": "next lint",
-    "electron-next": "concurrently \"npm run start\" \"wait-on http://localhost:3000/ && electron .\"",
+    "quiz": "npm run build && concurrently \"npm run start\" \"wait-on http://localhost:3000/ && STEP=quiz electron .\"",
+    "podium": "npm run build && concurrently \"npm run start\" \"wait-on http://localhost:3000/ && STEP=podium electron .\"",
+    "social": "npm run build && concurrently \"npm run start\" \"wait-on http://localhost:3000/ && STEP=social electron .\"",
+    "customer-journey": "npm run build && concurrently \"npm run start\" \"wait-on http://localhost:3000/ && STEP=customer-journey electron .\"",
     "clear-repos": "node scripts/clear-repos.js"
   },
   "dependencies": {

@@ -29,7 +29,10 @@ export default function Landing({
             )}
           </div>
           <footer className='transition-all'>
-            <Touch stroke={status ? colors[step].primary : colors.white} />
+            <Touch
+              stroke={status ? colors[step].primary : colors.white}
+              className='animate-waving-hand'
+            />
             <p className='mt-8 text-5xl'>Toca la pantalla para empezar</p>
           </footer>
         </div>
