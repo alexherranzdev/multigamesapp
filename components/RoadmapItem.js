@@ -16,7 +16,6 @@ export default function RoadmapItem({ value, text = null, children }) {
               <span className='mt-4 text-2xl'>{text}</span>
             )}
           </div>
-          {provided.placeholder}
         </>
       )}
     </Draggable>

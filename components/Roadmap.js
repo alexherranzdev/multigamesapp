@@ -33,11 +33,13 @@ export default function Roadmap({ data, active = 0, step, selecteds = {} }) {
                     }`}
                     ref={provided.innerRef}
                   >
-                    {selecteds[item.id] === '5' && <FaceHappy />}
-                    {selecteds[item.id] === '4' && <FaceSmile />}
-                    {selecteds[item.id] === '3' && <FaceQuestion />}
-                    {selecteds[item.id] === '2' && <FaceSad />}
-                    {selecteds[item.id] === '1' && <FaceBad />}
+                    <div>
+                      {selecteds[item.id] === '5' && <FaceHappy />}
+                      {selecteds[item.id] === '4' && <FaceSmile />}
+                      {selecteds[item.id] === '3' && <FaceQuestion />}
+                      {selecteds[item.id] === '2' && <FaceSad />}
+                      {selecteds[item.id] === '1' && <FaceBad />}
+                    </div>
                   </li>
                 )}
               </Droppable>
@@ -65,6 +67,18 @@ export default function Roadmap({ data, active = 0, step, selecteds = {} }) {
         }
 
         li {
+          width: 200px;
+          height: 150px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        li:first-child {
+          margin-left: -50px;
+        }
+
+        li div {
           background: ${colors[step].primary};
           border-radius: 100%;
           height: 69px;
@@ -73,12 +87,12 @@ export default function Roadmap({ data, active = 0, step, selecteds = {} }) {
           z-index: 2;
         }
 
-        li.active {
+        li.active div {
           height: 90px;
           width: 90px;
         }
 
-        li.dragging {
+        li.dragging div {
           transform: scale(1.3);
         }
 
@@ -89,7 +103,7 @@ export default function Roadmap({ data, active = 0, step, selecteds = {} }) {
           left: -15px;
         }
 
-        li.active :global(svg) {
+        li.active div :global(svg) {
           transform: scale(0.9);
           top: -6px;
           left: -4px;

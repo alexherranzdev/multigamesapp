@@ -123,7 +123,7 @@ export default function Podium() {
             <Droppable droppableId='faces'>
               {(provided) => (
                 <div
-                  className='flex justify-around w-3/4 mx-auto mt-36'
+                  className='flex items-start justify-around w-3/4 mx-auto mt-36'
                   ref={provided.innerRef}
                 >
                   <RoadmapItem value={5} text='Increíble'>
@@ -141,6 +141,7 @@ export default function Podium() {
                   <RoadmapItem value={1} text='No tan bueno'>
                     <FaceBad />
                   </RoadmapItem>
+                  {provided.placeholder}
                 </div>
               )}
             </Droppable>
