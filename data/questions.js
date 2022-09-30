@@ -6,8 +6,8 @@ const questions = [
     options: [
       { label: 'La competencia', type: 'option' },
       { label: 'Crisis (inflación, consumo, energía...)', type: 'option' },
-      { label: 'Digitalización', type: 'option' },
-      { label: 'Otros', type: 'text' }
+      { label: 'Digitalización', type: 'option' }
+      // { label: 'Otros', type: 'text' }
     ]
   },
   {
@@ -18,8 +18,8 @@ const questions = [
     options: [
       { label: 'Análisis de dato (BI)', type: 'option' },
       { label: 'Herramientas de marketing y comunicación', type: 'option' },
-      { label: 'Auto Formación para mi equipo y mis clientes', type: 'option' },
-      { label: 'Otros', type: 'text' }
+      { label: 'Auto Formación para mi equipo y mis clientes', type: 'option' }
+      // { label: 'Otros', type: 'text' }
     ]
   },
   {
@@ -35,8 +35,8 @@ const questions = [
       {
         label: 'Análisis y toma de decisiones para el crecimiento de negocio',
         type: 'option'
-      },
-      { label: 'Otros', type: 'text' }
+      }
+      // { label: 'Otros', type: 'text' }
     ]
   }
 ]

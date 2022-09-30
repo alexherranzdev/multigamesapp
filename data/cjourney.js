@@ -38,5 +38,15 @@ export const cjourney = [
     id: 8,
     section: 'Fidelización',
     text: '¿Te sientes acompañado?'
+  },
+  {
+    id: 9,
+    section: 'Comunicación',
+    text: '¿Nos comunicamos contigo de manera eficiente? Te llegan las novedades, actualizaciones, invitaciones a eventos, etc?'
+  },
+  {
+    id: 10,
+    section: 'Formación',
+    text: '¿Te parece suficiente y útil la formación sobre las soluciones que te ofrecemos?'
   }
 ]

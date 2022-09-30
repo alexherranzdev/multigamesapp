@@ -108,6 +108,9 @@ export default function Podium() {
                 {activeElement.section}
               </h2>
               <h1 className='mt-8 text-6xl font-bold'>{activeElement.text}</h1>
+              <p className='mt-20 text-2xl text-center'>
+                Arrastra un emoji para valorar cada fase del Costumer Journey
+              </p>
             </header>
           )}
 
@@ -144,10 +147,6 @@ export default function Podium() {
               )}
             </Droppable>
           </DragDropContext>
-
-          <p className='mt-20 text-2xl text-center'>
-            Arrastra un emoji para valorar cada fase del Costumer Journey
-          </p>
           {icon === 'eye' && (
             <div className='footer-icons'>
               {eyes.map(({ bottom, left, rotate }, index) => (
@@ -201,10 +200,14 @@ export default function Podium() {
         <Result step={step} title='Finalizado' onClick={resetStep} />
       )}
       <style jsx>{`
+        header {
+          height: 450px;
+        }
+
         section {
           background: ${colors[step].secondary};
           color: ${colors[step].text};
-          padding-top: 270px;
+          padding-top: 220px;
         }
       `}</style>
     </>

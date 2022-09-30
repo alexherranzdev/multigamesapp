@@ -1,10 +1,8 @@
-export const addApiCustomerJourney = async (podium) => {
+export const addApiCustomerJourney = async (selecteds) => {
   const url = `${process.env.NEXT_PUBLIC_API_URL}/customer-journey`
 
   const formData = new FormData()
-  formData.append('podium_1', podium[1]?.map((p) => p.text).join(',') || '')
-  formData.append('podium_2', podium[2]?.map((p) => p.text).join(',') || '')
-  formData.append('podium_3', podium[3]?.map((p) => p.text).join(',') || '')
+  formData.append('points', Object.values(selecteds).join(','))
 
   return fetch(url, {
     method: 'POST',

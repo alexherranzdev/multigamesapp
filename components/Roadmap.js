@@ -15,7 +15,7 @@ export default function Roadmap({ data, active = 0, step, selecteds = {} }) {
           style={{
             width: data.length * (90 + 328),
             transform: `translateX(${
-              1080 / 2 - 69 / 2 - 328 * 1.2 * (active - 1)
+              1080 / 2 - 69 / 2 - 328 * 1.37 * (active - 1)
             }px)`
           }}
         >
@@ -51,7 +51,7 @@ export default function Roadmap({ data, active = 0, step, selecteds = {} }) {
         ul {
           display: flex;
           gap: 328px;
-          margin-top: 185px;
+          margin-top: 100px;
           position: relative;
           transform: translateX(${1080 / 2 - 69 / 2}px);
         }
@@ -63,7 +63,7 @@ export default function Roadmap({ data, active = 0, step, selecteds = {} }) {
           left: 0;
           position: absolute;
           top: 50%;
-          width: 100%;
+          width: calc(100% - 945px);
         }
 
         li {
