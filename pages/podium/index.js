@@ -7,6 +7,7 @@ import cards from 'data/cards'
 import PodiumNumber from 'components/PodiumNumber'
 import PodiumCard from 'components/PodiumCard'
 import { DragDropContext, Droppable } from 'react-beautiful-dnd-next'
+import { addApiPodium } from 'services/PodiumService'
 
 const step = 'podium'
 
@@ -51,10 +52,7 @@ export default function Podium() {
   })
 
   const handleShowResults = () => {
-    fetch('/api/podium', {
-      method: 'POST',
-      body: JSON.stringify(selecteds)
-    }).then(() => {
+    addApiPodium(selecteds).then(() => {
       setStatus(0)
       setShowResults(true)
     })

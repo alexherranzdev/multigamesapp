@@ -54,14 +54,16 @@ export default function PodiumCard({
         index={index}
         isDragDisabled={!isDraggable}
       >
-        {(provided) => (
+        {(provided, snapshot) => (
           <div
             ref={provided.innerRef}
             {...provided.draggableProps}
             {...provided.dragHandleProps}
           >
             <article
-              className={`relative flex p-5 rounded-3xl text-xl podium-card-${id} size-${size}`}
+              className={`relative flex p-5 rounded-3xl text-xl podium-card-${id} size-${size} ${
+                snapshot.isDragging ? 'dragging' : ''
+              }`}
               style={styleCard}
               {...props}
             >
@@ -78,6 +80,10 @@ export default function PodiumCard({
           box-shadow: 6px 6px 11px rgba(52, 71, 82, 0.4);
           height: 232px;
           width: 232px;
+        }
+
+        .dragging {
+          box-shadow: 6px 6px 11px rgba(52, 71, 82, 0.4);
         }
 
         .size-small {
