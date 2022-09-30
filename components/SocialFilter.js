@@ -84,6 +84,7 @@ export default function SocialFilter({
         (p5.windowHeight - marco.height) / 2
       )
     }
+
     setImage(p5)
   }
 
@@ -98,7 +99,10 @@ export default function SocialFilter({
       p5.rotate(angle * 1)
 
       if (status === STATUSES.STOPPED) {
-        seq.pause()
+        const rand = Math.round(Math.random() * (5000 - 500)) + 500
+        setTimeout(() => {
+          seq.pause()
+        }, rand)
       }
 
       if (status !== STATUSES.SAVING) {
@@ -145,7 +149,6 @@ export default function SocialFilter({
   }
 
   const pauseVideo = () => {
-    seq.pause()
     setStatus(STATUSES.STOPPED)
   }
 
@@ -153,10 +156,11 @@ export default function SocialFilter({
     const rand = Math.round(Math.random() * (3000 - 500)) + 500
 
     setStatus(STATUSES.PLAYING)
-    seq.play()
-    seq.reset()
+    // seq.play()
+    // seq.reset()
 
-    setTimeout(pauseVideo, rand)
+    pauseVideo(rand)
+    // setTimeout(pauseVideo, rand)
   }
 
   return (
