@@ -14,6 +14,7 @@
     "podium": "npm run build && concurrently \"npm run start\" \"wait-on http://localhost:3000/ && STEP=podium electron .\"",
     "social": "npm run build && concurrently \"npm run start\" \"wait-on http://localhost:3000/ && STEP=social electron .\"",
     "customer-journey": "npm run build && concurrently \"npm run start\" \"wait-on http://localhost:3000/ && STEP=customer-journey electron .\"",
+    "electron": "npm run build && concurrently \"npm run start\" \"wait-on http://localhost:3000/ && electron .\"",
     "clear-repos": "node scripts/clear-repos.js"
   },
   "dependencies": {
