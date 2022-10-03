@@ -58,8 +58,7 @@ export default function SocialFilter({
     if (
       status === STATUSES.NOT_START ||
       status === STATUSES.PLAYING ||
-      status === STATUSES.SAVING ||
-      status === STATUSES.STOP
+      status === STATUSES.SAVING
     ) {
       video = p5.createCapture(p5.VIDEO)
       video.hide()
