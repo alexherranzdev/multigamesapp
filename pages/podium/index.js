@@ -63,6 +63,7 @@ export default function Podium() {
     setShowResults(false)
     setItems(cards)
     setSelecteds({})
+    location.reload()
   }
 
   const onDragEnd = (result) => {
