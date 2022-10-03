@@ -58,7 +58,8 @@ export default function SocialFilter({
     if (
       status === STATUSES.NOT_START ||
       status === STATUSES.PLAYING ||
-      status === STATUSES.SAVING
+      status === STATUSES.SAVING ||
+      status === STATUSES.STOP
     ) {
       video = p5.createCapture(p5.VIDEO)
       video.hide()
@@ -153,14 +154,8 @@ export default function SocialFilter({
   }
 
   const stopSequence = () => {
-    const rand = Math.round(Math.random() * (3000 - 500)) + 500
-
     setStatus(STATUSES.PLAYING)
-    // seq.play()
-    // seq.reset()
-
-    pauseVideo(rand)
-    // setTimeout(pauseVideo, rand)
+    pauseVideo()
   }
 
   return (
